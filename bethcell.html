@@ -206,7 +206,7 @@
                                 <ul class="footer-follow">
                                         <li><a href="#"><i class="fa fa-facebook" style="font-size:30px;color:#3b5998"></i></a></li>
                                         <li><a href="#"><i class="fa fa-twitter" style="font-size:30px;color:#00aced"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-whatsapp" style="font-size:30px;color:#34af23"></i></a></li>
+                                        <li><a href="" id="whatsapp-share-btt" rel="nofollow" target="_blank"><i class="fa fa-whatsapp" style="font-size:30px;color:#34af23"></i></a></li>
                                         <li><a href="#"><i class="fa fa-instagram" style="font-size:30px;color:#517fa4"></i></a></li>
                                     </ul>
                         </div>
@@ -261,7 +261,14 @@
             </script> - <a href="https://www.closedlabs.com.br/" target="_blank">Closedlabs</a></p>
         </div>
     </footer>
-  
+    <script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function() {
+		//conteúdo que será compartilhado: Título da página + URL
+		var conteudo = encodeURIComponent(document.title + " " + window.location.href);
+		//altera a URL do botão
+		document.getElementById("whatsapp-share-btt").href = "https://api.whatsapp.com/send?text=" + conteudo;
+	}, false);
+	</script>
 	<!-- jQuery Plugins -->
 	
 	<script src="js/masterslider.min.js"></script>
